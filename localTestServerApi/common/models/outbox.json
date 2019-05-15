@@ -1,0 +1,59 @@
+{
+  "name": "outbox",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "isStar": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHaveFile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHaveAudio": {
+      "type": "boolean",
+      "default": false
+    },
+    "from": {
+      "type": "object"
+    },
+    "receiveList": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "ccList": {
+      "type": [
+        "object"
+      ]
+    },
+    "labelList": {
+      "type": [
+        "object"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "sendDate": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

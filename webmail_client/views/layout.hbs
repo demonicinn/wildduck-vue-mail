@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{>header}}
+</head>
+
+<body>
+
+    {{>navbar}}
+    <div class="flash-messages">
+        {{flash_messages}}
+    </div>
+
+    <div class="container">
+
+        {{{body}}}
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">&copy; 2017 <a href="/">{{serviceName}}</a>. <a href="mailto:info@{{serviceDomain}}">info@{{serviceDomain}}</a>. </p>
+        </div>
+    </footer>
+
+    {{> scripts}}
+</body>
+
+</html>

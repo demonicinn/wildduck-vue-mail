@@ -1,0 +1,35 @@
+{
+  "name": "Threads",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "thread": {
+      "type": "string",
+      "required": true
+    },
+    "sender": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "hasChildren" : {
+      "type": "boolean",
+      "default": false
+    },
+    "children": {
+      "type": [
+        "Threads"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

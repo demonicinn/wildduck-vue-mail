@@ -1,0 +1,62 @@
+{
+  "name": "inbox",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "isStar": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHaveFile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHaveAudio": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": [
+        "number"
+      ],
+      "required": true,
+      "default": [
+        0
+      ]
+    },
+    "sendName": {
+      "type": "string",
+      "required": true
+    },
+    "sendMail": {
+      "type": "string",
+      "required": true
+    },
+    "labelList": {
+      "type": [
+        "object"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "receiveDate": {
+      "type": "date",
+      "required": true
+    },
+    "readDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

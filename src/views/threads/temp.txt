@@ -1,0 +1,13 @@
+props -> { subject, sender, date }
+subject -> { content of mail }
+sender -> { sender's email }
+date -> { email send/recieve date}
+
+extras:
+    - Parent node will be the first mail ( either/sent or recieved )
+    - Sender will the first sender ( i.e. the person who initiated by sending first mail)
+    - uploads, updates and downloads are also recorded but at the the same level
+
+Table structure: 
+    columns -> { subject, sender, date }
+    

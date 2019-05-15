@@ -1,0 +1,71 @@
+<script src="/js/underscore-min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/promise.min.js"></script>
+
+<script src="/js/moment-with-locales.min.js"></script>
+
+<script src="/bootstrap-3.3.7/js/bootstrap.js"></script>
+
+<link href="/js/daterangepicker.css" rel="stylesheet">
+<script src="/js/daterangepicker.js"></script>
+
+<link href="/js/summernote.css" rel="stylesheet">
+<script src="/js/summernote.min.js"></script>
+
+<script src="/js/fetch.js"></script>
+<script src="/js/eventsource.min.js"></script>
+<script src="/js/handlebars.min.js"></script>
+
+<script src="/js/favico.js"></script>
+
+<script src="/wd.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("[rel='tooltip']").tooltip();
+    });
+</script>
+
+{{#if inboxId}}
+    <script>
+        var INBOX_ID = '{{inboxId}}';
+        var INBOX_UNSEEN = {{inboxUnseen}};
+        var FAVICON = new Favico({
+            animation:'slide'
+        });
+
+        if(INBOX_UNSEEN){
+            FAVICON.badge(INBOX_UNSEEN);
+        }
+    </script>
+{{else}}
+    <script>
+        var INBOX_ID = -1;
+        var INBOX_UNSEEN = 0;
+        var FAVICON = false;
+    </script>
+{{/if}}
+
+{{#if successlog}}
+<script src="/login-key-handler.js"></script>
+<script>
+    $(function() {
+        // store token about successful auth in this browser
+        var successlog = {{{successlog}}};
+        loginKeyHandler.set(successlog.username, successlog.value, 'recovery', successlog.days);
+    });
+</script>
+{{/if}}
+
+<script>
+window.setTimeout(function(){
+    var alerts = document.querySelectorAll('.flash-messages');
+    var elm;
+    for(var i=0, len = alerts.length; i<len; i++){
+        elm = alerts[i];
+        if(elm.parentNode){
+            elm.parentNode.removeChild(elm);
+        }
+    }
+}, 10 * 1000);
+
+</script>

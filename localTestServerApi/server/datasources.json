@@ -1,0 +1,12 @@
+{
+  "mailDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "mailApp",
+    "password": "",
+    "name": "mailDS",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

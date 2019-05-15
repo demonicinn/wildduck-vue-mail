@@ -1,0 +1,28 @@
+name="Wild Duck Mail Temporary"
+
+[service]
+    # email domain for new users
+    domain="dappbox.io"
+    # default quotas for new users
+    quota=102400
+    # allowed domains for new addresses
+    domains=["dappbox.io", "example.com"]
+
+[www]
+    proxy=true
+    baseurl="https://dappbox.io"
+
+[setup]
+    # these values are shown in the configuration help page
+    [setup.imap]
+        hostname="imap.ionos.fr"
+        secure=true
+        port=993
+    [setup.pop3]
+        hostname="dappbox.io"
+        secure=true
+        port=995
+    [setup.smtp]
+        hostname="smtp.ionos.fr"
+        secure=false
+        port=587
